@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EasyShopping.Infrastructure.Database;
+using EasyShopping.Core.Model.Product;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,15 +13,23 @@ namespace EasyShopping.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        [HttpGet]
-        public string GetProducts()
+
+        private readonly StoreContext _storeContext;
+        public ProductController(StoreContext storeContext)
         {
-            return "A list of product";
+            _storeContext = storeContext;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<List<Product>>> GetProducts()
+        {
+            var products = await _storeContext.Products.ToListAsync();
+            return Ok(products);
         }
         [HttpGet("{id}")]
-        public string GetProduct(int id)
+        public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            return "A single product";
+            return await _storeContext.Products.FindAsync(id);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EasyShopping.Model.Product
+namespace EasyShopping.Core.Model.Product
 {
     public class Product
     {

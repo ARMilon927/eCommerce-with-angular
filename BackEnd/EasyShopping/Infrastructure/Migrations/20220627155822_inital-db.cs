@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace EasyShopping.Migrations
+namespace EasyShopping.Infrastructure.Migrations
 {
-    public partial class initial : Migration
+    public partial class initaldb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace EasyShopping.Migrations
                 {
                     ProductId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ProductName = table.Column<string>(nullable: false)
+                    ProductName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

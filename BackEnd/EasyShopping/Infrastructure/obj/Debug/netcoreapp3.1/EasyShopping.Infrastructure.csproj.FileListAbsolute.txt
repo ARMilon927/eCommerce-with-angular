@@ -1,0 +1,13 @@
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\obj\Debug\netcoreapp3.1\EasyShopping.Infrastructure.csproj.AssemblyReference.cache
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\obj\Debug\netcoreapp3.1\EasyShopping.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\obj\Debug\netcoreapp3.1\EasyShopping.Infrastructure.AssemblyInfoInputs.cache
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\obj\Debug\netcoreapp3.1\EasyShopping.Infrastructure.AssemblyInfo.cs
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\obj\Debug\netcoreapp3.1\EasyShopping.Infrastructure.csproj.CoreCompileInputs.cache
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\bin\Debug\netcoreapp3.1\EasyShopping.Infrastructure.deps.json
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\bin\Debug\netcoreapp3.1\EasyShopping.Infrastructure.dll
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\bin\Debug\netcoreapp3.1\EasyShopping.Infrastructure.pdb
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\bin\Debug\netcoreapp3.1\EasyShopping.Core.dll
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\bin\Debug\netcoreapp3.1\EasyShopping.Core.pdb
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\obj\Debug\netcoreapp3.1\EasyShopping.Infrastructure.csproj.CopyComplete
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\obj\Debug\netcoreapp3.1\EasyShopping.Infrastructure.dll
+H:\2022\eCommerce-with-angular\BackEnd\EasyShopping\Infrastructure\obj\Debug\netcoreapp3.1\EasyShopping.Infrastructure.pdb

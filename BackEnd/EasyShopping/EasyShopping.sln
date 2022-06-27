@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping", "EasyShopping\EasyShopping.csproj", "{B3474B6F-6FE7-4277-8BF2-9AA1A3482FDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyShopping", "EasyShopping\EasyShopping.csproj", "{B3474B6F-6FE7-4277-8BF2-9AA1A3482FDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Core", "Core\EasyShopping.Core.csproj", "{4A230152-D89F-4D26-BEFE-94710B247F9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyShopping.Infrastructure", "Infrastructure\EasyShopping.Infrastructure.csproj", "{6A9C208E-232F-4C10-A005-D0745A9A60A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B3474B6F-6FE7-4277-8BF2-9AA1A3482FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3474B6F-6FE7-4277-8BF2-9AA1A3482FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3474B6F-6FE7-4277-8BF2-9AA1A3482FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A230152-D89F-4D26-BEFE-94710B247F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A230152-D89F-4D26-BEFE-94710B247F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A230152-D89F-4D26-BEFE-94710B247F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A230152-D89F-4D26-BEFE-94710B247F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9C208E-232F-4C10-A005-D0745A9A60A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9C208E-232F-4C10-A005-D0745A9A60A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9C208E-232F-4C10-A005-D0745A9A60A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9C208E-232F-4C10-A005-D0745A9A60A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
