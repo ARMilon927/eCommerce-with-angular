@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EasyShopping.Core.Interfaces;
 
 namespace EasyShopping.Controllers
 {
@@ -14,22 +15,34 @@ namespace EasyShopping.Controllers
     public class ProductController : ControllerBase
     {
 
-        private readonly StoreContext _storeContext;
-        public ProductController(StoreContext storeContext)
+        private readonly IProductRepository _productRepo;
+        public ProductController(IProductRepository productRepo)
         {
-            _storeContext = storeContext;
+            _productRepo = productRepo;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            var products = await _storeContext.Products.ToListAsync();
+            var products = await _productRepo.GetProducts();
             return Ok(products);
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
+        {            
+            return await _productRepo.GetProductByIdAsync(id);
+        }
+        [HttpGet("{brands}")]
+        public async Task<ActionResult<List<Product>>> GetProductBrands()
         {
-            return await _storeContext.Products.FindAsync(id);
+            var brands = await _productRepo.GetProductBrands();
+            return Ok(brands);
+        }
+        [HttpGet("{types}")]
+        public async Task<ActionResult<List<Product>>> GetProductTypes()
+        {
+            var types = await _productRepo.GetProductTypes();
+            return Ok(types);
         }
     }
 }
