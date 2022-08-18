@@ -1,3 +1,4 @@
+using EasyShopping.Core.Helpers;
 using EasyShopping.Core.Interfaces;
 using EasyShopping.Infrastructure.Database;
 using EasyShopping.Infrastructure.Repositories;
@@ -32,6 +33,7 @@ namespace EasyShopping
         {
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+            services.AddAutoMapper (typeof(MappingProfiles));
             services.AddControllers();
             services.AddDbContext<StoreContext>(x => x.UseSqlServer(_config.GetConnectionString("DefaultString")));
         }

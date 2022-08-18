@@ -1,5 +1,5 @@
-﻿using EasyShopping.Core.Interfaces;
-using EasyShopping.Core.Model;
+﻿using EasyShopping.Core.Model;
+using EasyShopping.Core.Specifications;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

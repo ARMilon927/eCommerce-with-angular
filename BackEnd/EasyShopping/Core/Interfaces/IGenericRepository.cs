@@ -1,4 +1,5 @@
 ﻿using EasyShopping.Core.Model;
+using EasyShopping.Core.Specifications;
 using System;
 using System.Collections.Generic;
 using System.Text;

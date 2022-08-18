@@ -1,13 +1,16 @@
-﻿using EasyShopping.Core.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace EasyShopping.Infrastructure.Repositories
+namespace EasyShopping.Core.Specifications
 {
     public class BaseSpecification<T> : ISpecification<T>
     {
+        public BaseSpecification()
+        {
+
+        }
         public BaseSpecification(Expression<Func<T, bool>> criteria)
         {
             Criteria = criteria;
