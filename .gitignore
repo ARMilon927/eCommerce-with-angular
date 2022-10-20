@@ -6,6 +6,9 @@
 
 **/bin/
 **/Bin/
+# Ignoring all product images
+
+**/wwwroot/images/products/
 
 # Ignoring all obj
 
