@@ -1,3 +1,4 @@
+using AutoMapper;
 using EasyShopping.Core.Helpers;
 using EasyShopping.Core.Interfaces;
 using EasyShopping.Infrastructure.Database;
@@ -35,7 +36,7 @@ namespace EasyShopping
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
             services.AddAutoMapper (typeof(MappingProfiles));
             services.AddControllers();
-            services.AddDbContext<StoreContext>(x => x.UseSqlServer(_config.GetConnectionString("DefaultString")));
+            services.AddDbContext<StoreContext>(x => x.UseSqlServer(_config.GetConnectionString("DefaultString"),options=> { options.CommandTimeout(120); }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,12 +50,15 @@ namespace EasyShopping
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseStaticFiles();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                name: "default",
+                pattern: "api/{controller}/{action}/{id}");
             });
         }
     }

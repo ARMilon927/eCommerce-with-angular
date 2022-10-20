@@ -31,23 +31,24 @@ namespace EasyShopping.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ProductDTO>>> GetProducts()
+        public async Task<ActionResult<IReadOnlyList<ProductDTO>>> GetProducts()
         {
             //var products = await _productRepo.GetProducts();
             //return Ok(products);
             //return Ok(await _productRepo.GetAllAsync());
             var spec = new ProductsWithTypesAndBrandsSpecifications();
             var products = await _productRepo.ListAsync(spec);
-            return Ok(products.Select(x=> new ProductDTO { 
-                Id= x.Id,
-                Description = x.Description,
-                Price = x.Price,
-                ProductBrand = x.ProductBrand.Name,
-                ProductName = x.ProductName,
-                ProductPhoto = x.ProductPhoto,
-                ProductPhotoUrl= x.ProductPhotoUrl,
-                ProductType = x.ProductType.Name
-            }).ToList());
+            //return Ok(products.Select(x=> new ProductDTO { 
+            //    Id= x.Id,
+            //    Description = x.Description,
+            //    Price = x.Price,
+            //    ProductBrand = x.ProductBrand.Name,
+            //    ProductName = x.ProductName,
+            //    ProductPhoto = x.ProductPhoto,
+            //    ProductPhotoUrl= x.ProductPhotoUrl,
+            //    ProductType = x.ProductType.Name
+            //}).ToList());
+            return Ok(_mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductDTO>>(products));
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<ProductDTO>> GetProduct(int id)
@@ -68,14 +69,14 @@ namespace EasyShopping.Controllers
             //};
             return _mapper.Map<Product, ProductDTO>(product);
         }
-        [HttpGet("{brands}")]
+        [HttpGet("brands")]
         public async Task<ActionResult<List<ProductBrand>>> GetProductBrands()
         {
             //var brands = await _productRepo.GetProductBrands();
             //return Ok(brands);
             return Ok(await _productBrandRepo.GetAllAsync());
         }
-        [HttpGet("{types}")]
+        [HttpGet("types")]
         public async Task<ActionResult<List<ProductType>>> GetProductTypes()
         {
             //var types = await _productRepo.GetProductTypes();
